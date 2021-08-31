@@ -23,5 +23,10 @@ $ $EDITOR .env
 $ make run
 #+END_SRC
 
+*** Docker
+#+BEGIN_SRC sh
+$ docker run --env-file .env  ghcr.io/dearrude/mastodon-bot:latest 
+#+END_SRC
+
 ** Licence
 AGPLv3+
