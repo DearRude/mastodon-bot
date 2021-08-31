@@ -1,0 +1,22 @@
+#+TITLE: Mastodon Bot
+
+** Bots
+*** Hagh
+Hagh reblogs certain toots to itself creating a Hagh page. Users from local instance are able to make a toot hagh.
+
+** Setup
+Have ~go~ and ~GNUMake~ installed.
+
+Copy the env var sample and fill the parts
+#+BEGIN_SRC sh
+$ cp .env.sample .env
+$ $EDITOR .env
+#+END_SRC
+** Run
+*** From source
+#+BEGIN_SRC sh
+$ make run
+#+END_SRC
+
+** Licence
+AGPLv3+
