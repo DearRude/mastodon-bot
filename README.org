@@ -1,5 +1,10 @@
 #+TITLE: Mastodon Bot
 
+[[https://github.com/DearRude/mastodon-bot/actions/workflows/build.yml/badge.svg]]
+[[https://img.shields.io/github/license/dearrude/mastodon-bot.svg]]
+[[https://img.shields.io/github/last-commit/dearrude/mastodon-bot.svg]]
+
+
 ** Bots
 *** Hagh
 Hagh reblogs certain toots to itself creating a Hagh page. Users from local instance are able to make a toot hagh.
