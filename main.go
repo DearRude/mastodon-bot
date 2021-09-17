@@ -10,9 +10,12 @@ import (
 	"github.com/mattn/go-mastodon"
 )
 
-const rejectText = "اهل خیارستان نیستی. نمی‌شناسمت."
-const failedText = "بوقت قابل حق شدن نیست."
-const noreplyText = "بوقی برای حق شدن نیست."
+const (
+	rejectText    = "اهل خیارستان نیستی. نمی‌شناسمت."
+	failedText    = "بوقت قابل حق شدن نیست."
+	noreplyText   = "بوقی برای حق شدن نیست."
+	rebloggedText = "بوق مورد نظر با موفقیت حق اعلام شد."
+)
 
 func main() {
 	c := mastodon.NewClient(&mastodon.Config{
@@ -90,6 +93,9 @@ func main() {
 			continue
 		}
 		log.Printf("Reblogged status with ID: %s", replyID)
+		if err := postToot(rebloggedText, notif.Status.ID); err != nil {
+			log.Printf("Failed to post reblogged toot with ID : %s", notif.Status.ID)
+		}
 	}
 
 }
